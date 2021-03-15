@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public float baseSpawnTimeIntervalSeconds = 4;
-    public float intervalDescreasePerPoint = 0.3f;
+    public float intervalDecreasePerPoint = 0.1f;
     public GameObject[] spawnedObjectsPrefabs;
 
     public float spawnPositionY;
@@ -51,6 +51,6 @@ public class SpawnManager : MonoBehaviour
 
 	private float CalculateTimeInterval()
 	{
-        return baseSpawnTimeIntervalSeconds - intervalDescreasePerPoint * (float)gameManager.CurrentPointsGathered;
+        return baseSpawnTimeIntervalSeconds - intervalDecreasePerPoint * (float)gameManager.CurrentPointsGathered;
 	}
 }
