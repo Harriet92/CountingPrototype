@@ -12,14 +12,8 @@ public class GameManager : MonoBehaviour
         CurrentPointsGathered++;
 	}
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void GameOver()
+	{
+        IsGameRunning = false;
+	}
 }

@@ -17,7 +17,12 @@ public class Counter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        gameManager.AddPoint(); ;
-        CounterText.text = "Count : " + gameManager.CurrentPointsGathered;
+        if (other.CompareTag("Bad"))
+            gameManager.GameOver();
+        else
+        {
+            gameManager.AddPoint(); 
+            CounterText.text = "Count : " + gameManager.CurrentPointsGathered;
+        }
     }
 }
