@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &165079926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpawnTimeIntervalSeconds: 4
-  intervalDecreasePerPoint: 0.1
+  intervalDecreasePerPoint: 0.2
+  minSpawnTimeInterval: 0.8
   spawnedObjectsPrefabs:
   - {fileID: 4756447893965967124, guid: cd5943341a756c844942679a2ab327e5, type: 3}
   - {fileID: 7015960041943760519, guid: dfc4478918da2de468ff204701194063, type: 3}
@@ -705,7 +706,7 @@ Transform:
   m_GameObject: {fileID: 658115677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1, z: 50}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

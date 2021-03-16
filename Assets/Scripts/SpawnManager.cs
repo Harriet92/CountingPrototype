@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
 {
     public float baseSpawnTimeIntervalSeconds = 4;
     public float intervalDecreasePerPoint = 0.1f;
+    public float minSpawnTimeInterval = 0.8f;
     public GameObject[] spawnedObjectsPrefabs;
 
     public float spawnPositionY;
@@ -51,6 +52,8 @@ public class SpawnManager : MonoBehaviour
 
 	private float CalculateTimeInterval()
 	{
-        return baseSpawnTimeIntervalSeconds - intervalDecreasePerPoint * (float)gameManager.CurrentPointsGathered;
+		var calculated = baseSpawnTimeIntervalSeconds - intervalDecreasePerPoint * (float)gameManager.CurrentPointsGathered;
+
+		return calculated < minSpawnTimeInterval ? minSpawnTimeInterval : calculated;
 	}
 }
